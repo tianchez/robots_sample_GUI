@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
   Answer ans;
   ans.readAnswer();
   GUI gui(ans);
-  gui.setWindowTitle("Tianchen Zhang's searching engine");
+  gui.setWindowTitle("Frank's sample GUI");
   gui.show();
   return app.exec();
 

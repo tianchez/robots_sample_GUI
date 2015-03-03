@@ -8,6 +8,7 @@
 #include "Answer.h"
 #include <QString>
 #include <vector>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -150,7 +151,7 @@ void GUI::option1Clicked()
     optionButton[1]->setText("No, I want to quit");
   }
  }
- else if (answer[0]=="!@#$")
+ else if (answer[0]=="!@#$")//press restart
  {
   result->clear();
   string temp="Robots: ";
@@ -177,7 +178,7 @@ void GUI::option1Clicked()
 void GUI::option2Clicked()
 {
 	cout<<"option2Clicked"<<endl;
-    if (answer[1]!="!@#$")
+    if (answer[0]!="!@#$")
   {
     string temp="You: "+answer[1];
   QString qstr = QString::fromStdString(temp);
@@ -222,23 +223,26 @@ void GUI::option2Clicked()
     optionButton[1]->setText("No, I want to quit");
   }
  }
- else if (answer[1]=="!@#$")
+  if (answer[0]=="!@#$")// press I want to quit
  {
-  result->clear();
-  string temp="Robots: ";
-  temp=temp+tagAndQuestion["start"];
-  QString qstr = QString::fromStdString(temp);
-  result->append(qstr);
-    //result->resize(800,400);
+  QMessageBox msgBox;
+  msgBox.setText("Do you really want to quit this program?");
+  msgBox.setStandardButtons(QMessageBox::Close | QMessageBox::Cancel);
+  msgBox.setDefaultButton(QMessageBox::Cancel);
+  int choice = msgBox.exec();
 
-  vector<string> vec=tagAndAnswer["start"];
-  answer[0]=vec[0];
-  answer[1]=vec[1];
-  QString button1Qstring = QString::fromStdString(answer[0]);
-  QString button2Qstring = QString::fromStdString(answer[1]);
-
-  optionButton[0]->setText(button1Qstring);
-  optionButton[1]->setText(button2Qstring);
+  switch (choice) {
+   case QMessageBox::Close:
+       this->close();
+       break;
+   case QMessageBox::Cancel:
+       // Don't Save was clicked
+       break;
+   
+   default:
+       // should never be reached
+       break;
+    }
  }
 }
 
