@@ -87,7 +87,7 @@ void Answer::readAnswer()//hard code for now
 	tagAndAnswer.emplace(tag,tempAnswer);
 	tagAndQuestion.emplace(tag,ques);
 
-	ques="It is your contribution to USC that makes USC.renowned in a fame of research university. Keep researching! Fight on!Welcome back! USC is always the second home of yours! ";//7th blcok
+	ques="It is your contribution to USC that makes USC.renowned in a fame of research university. Keep researching! Fight on! ";//7th blcok
 	tag="grads!";
 	ans1="!@#$";
 	ans2="!@#$";
@@ -206,6 +206,17 @@ void Answer::readAnswer()//hard code for now
 	tempAnswer.push_back(ans2);
 	tagAndAnswer.emplace(tag,tempAnswer);
 	tagAndQuestion.emplace(tag,ques);
+
+	ques="Welcome back! USC is always the second home of yours!";//20th blcok
+	tag="Yeah!";
+	ans1="!@#$";
+	ans2="!@#$";
+	tempAnswer.clear();
+	tempAnswer.push_back(ans1);
+	tempAnswer.push_back(ans2);
+	tagAndAnswer.emplace(tag,tempAnswer);
+	tagAndQuestion.emplace(tag,ques);
+	
 
 	return;
 

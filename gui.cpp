@@ -223,7 +223,7 @@ void GUI::option2Clicked()
     optionButton[1]->setText("No, I want to quit");
   }
  }
-  if (answer[0]=="!@#$")// press I want to quit
+  else if (answer[0]=="!@#$")// press I want to quit
  {
   QMessageBox msgBox;
   msgBox.setText("Do you really want to quit this program?");
@@ -274,7 +274,7 @@ void GUI::option3Clicked()
 
         buttonQstring[i] = QString::fromStdString(answer[i]);
          optionButton[i]->setText(buttonQstring[i]);
-         cout<<i<<endl;
+         //cout<<i<<endl;
       }
 
     for (int i=size;i<4;i++)
