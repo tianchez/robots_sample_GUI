@@ -53,7 +53,7 @@ void Answer::readAnswer()//hard code for now
 	tagAndAnswer.emplace(tag,tempAnswer);
 	tagAndQuestion.emplace(tag,ques);
 
-	ques="The University of Southern California (USC)is a private, not-for-profit, nonsectarian, research university founded in 1880 with its main campus in the city area of Los Angeles, California.\nAs California's oldest private research university, USC has historically educated a large number of the region's business leaders and professionals.\nIn recent decades, the university has also leveraged its location in Los Angeles to establish relationships with research and cultural institutions throughout Asia and the Pacific Rim. In 2011, USC was named among the Top 10 Dream Colleges in the nation.\nDo you want to know more about USC?";//4th blcok
+	ques="The University of Southern California (USC)is a private, not-for-profit, nonsectarian, research university founded in 1880 with its main campus in the city area of Los Angeles, California. As California's oldest private research university, USC has historically educated a large number of the region's business leaders and professionals. In recent decades, the university has also leveraged its location in Los Angeles to establish relationships with research and cultural institutions throughout Asia and the Pacific Rim. In 2011, USC was named among the Top 10 Dream Colleges in the nation.\n \n Do you want to know more about USC?";//4th blcok
 	tag="full name of USC?";
 	ans1="Yes, I want";
 	ans2="No, thanks";
@@ -82,6 +82,8 @@ void Answer::readAnswer()//hard code for now
 	tempAnswer.clear();
 	tempAnswer.push_back(ans1);
 	tempAnswer.push_back(ans2);
+	tempAnswer.push_back(ans3);
+	tempAnswer.push_back(ans4);
 	tagAndAnswer.emplace(tag,tempAnswer);
 	tagAndQuestion.emplace(tag,ques);
 
@@ -115,7 +117,7 @@ void Answer::readAnswer()//hard code for now
 	tagAndAnswer.emplace(tag,tempAnswer);
 	tagAndQuestion.emplace(tag,ques);
 
-	ques="Here is the link of detailed imformation of USC.\nhttp://en.wikipedia.org/wiki/University_of_Southern_California\nI hope these information can make you know more about USC!";//11th blcok
+	ques="Here is the link of detailed imformation of USC.\n http://en.wikipedia.org/wiki/University_of_Southern_California. \n \n I hope these information can make you know more about USC!";//11th blcok
 	tag="Yes, I want";
 	ans1="!@#$";
 	ans2="!@#$";
@@ -195,7 +197,7 @@ void Answer::readAnswer()//hard code for now
 	tagAndAnswer.emplace(tag,tempAnswer);
 	tagAndQuestion.emplace(tag,ques);
 
-	ques="Here is the location of USC.\n We hope you can visit USC if you like!\nhttps://maps.google.com/maps?safe=active&q=university+of+southern+california&bav=on.2,or.&bvm=bv.87269000,d.cGU&biw=1536&bih=704&dpr=1.25&um=1&ie=UTF-8&sa=X&ei=xofyVJfeCJeIoQSSoYLgDw&ved=0CAYQ_AUoAQ";//19th blcok
+	ques="Here is the location of USC.  We hope you can visit USC if you like! \n https://maps.google.com/maps?safe=active&q=university+of+southern+california&bav=on.2,or.&bvm=bv.87269000,d.cGU&biw=1536&bih=704&dpr=1.25&um=1&ie=UTF-8&sa=X&ei=xofyVJfeCJeIoQSSoYLgDw&ved=0CAYQ_AUoAQ";//19th blcok
 	tag="No, I hope so";
 	ans1="!@#$";
 	ans2="!@#$";

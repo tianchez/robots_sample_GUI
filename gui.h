@@ -40,11 +40,12 @@ protected:
   //map<string, List<string> > tree;
   map<string, vector<string> > tagAndAnswer;
   map<string, string> tagAndQuestion;
-  QPushButton* option1Button;
-  QPushButton* option2Button;
-  QPushButton* option3Button;
-  QPushButton* option4Button;
+  QPushButton* optionButton[4];
+  QString buttonQstring[4];  
   QTextEdit* result;
+  string answer[4];
+  
+
   
  };
 
